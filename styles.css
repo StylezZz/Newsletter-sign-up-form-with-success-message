@@ -1,0 +1,418 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:  hsl(234, 29%, 20%);
+}
+
+/*Tipografia*/
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url(assets/fonts/Roboto-Bold.ttf);
+}
+
+@font-face{
+    font-family: 'Roboto-Regular';
+    src: url(assets/fonts/Roboto-Regular.ttf);
+}
+
+.container{
+    /*Centrar el contenedor*/
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 8rem;
+    width: 1000px;
+    margin-left: 30rem;
+    border-radius: 25px;
+}
+
+.success-message{
+    /*Que no se vea*/
+    display: none;
+}
+
+.form-image{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.form-image img{
+    width: 80%;
+    height: 95%;
+    border-radius: 25px;
+    margin-left: 80px;
+}
+
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+    padding: 2rem;
+    margin-top: 30px;
+}
+
+.form-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.form-header h1{
+    font-family: 'Roboto-Bold';
+    font-weight: 700;
+    font-size: 59px;
+    color:  hsl(235, 18%, 26%);
+    padding-bottom: 20px;
+}
+
+.form-header p{
+    font-family: 'Roboto-Regular';
+    font-weight: 400;
+    font-size: 18px;
+    color:  hsl(234, 29%, 20%);
+    margin-top: 10px;
+    margin-left: 38px;
+    padding-bottom: 20px;
+}
+
+.form-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.form-body-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.form-body-left ul{
+    list-style: none;
+    margin-left: 38px;
+    padding-right: 10px;
+}
+
+.form-body-left ul li{
+    font-family: 'Roboto-Regular';
+    font-weight: 100;
+    font-size: 18px;
+    color:  hsl(234, 29%, 20%);
+    margin-top: 10px;
+}
+
+svg{
+    margin-top: 10px;
+    margin-right: 6px;
+}
+
+.form-body-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.form-body-right form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.form-body-right form label{
+    font-family: 'Roboto-Bold';
+    font-weight: 400;
+    font-size: 15px;
+    color:  hsl(235, 18%, 26%);
+    margin-left: 38px;
+}
+
+.form-body-right form input{
+    width: 80%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid hsl(234, 29%, 91%);
+    margin-left: 38px;
+    margin-top: 10px;
+    padding: 25px;
+}
+
+.form-body-right form input:focus{
+    outline: none;
+    border: 1px solid #000;
+}
+
+.form-body-right form button{
+    width: 80%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: hsl(234, 29%, 20%);
+    color: white;
+    font-family: 'Roboto-Bold';
+    font-weight: 400;
+    font-size: 15px;
+    margin-left: 38px;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+.form-body-right form button:hover{
+    background-color: hsl(4, 100%, 67%);
+    color: white
+}
+
+.error-email{
+    display: none;
+    font-family: 'Roboto-Regular';
+    font-weight: 400;
+    font-size: 15px;
+    color: hsl(0, 100%, 63%);
+    margin-left: 110px;
+    margin-top: 10px;
+}
+
+.form-body-right .active{
+    background-color: rgb(255, 182, 193);
+    color: white;
+    border: 1px solid red
+}
+
+.form-body-right .active::placeholder{
+    color: red;
+}
+
+.active-success-message{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 450px;
+    margin-left: 700px;
+    margin-top: 210px;
+    background-color: white;
+    border-radius: 25px;
+}
+
+.active-success-message svg{
+    margin-top: 40px;
+    margin-left: 55px;
+}
+
+.active-success-message h1{
+    font-family: 'Roboto-Bold';
+    font-weight: 700;
+    font-size:48px;
+    color:  hsl(235, 18%, 26%);
+    margin-top: 20px;
+    margin-left: 55px;
+}
+
+.active-success-message p{
+    font-family: 'Roboto-Regular';
+    font-weight: 400;
+    font-size: 15px;
+    color:  hsl(234, 29%, 20%);
+    margin-top: 10px;
+    margin-left: 55px;
+    margin-right: 55px;
+    line-height: 1.5;
+}
+
+.active-success-message button{
+    width: 80%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: hsl(234, 29%, 20%);
+    color: white;
+    font-family: 'Roboto-Bold';
+    font-weight: 400;
+    font-size: 15px;
+    margin-left: 55px;
+    margin-top: 45px;
+    cursor: pointer;
+}
+
+.active-success-message button:hover{
+    background-color: hsl(4, 100%, 67%);
+    color: white
+}
+
+#email-value{
+    font-weight: bold;
+}
+
+.mobile-img{
+    display: none;
+}
+
+.mobile-image{
+    display: none;
+}
+
+/*Media Queries*/
+@media screen and (max-width: 767px) {
+    .container{
+        width: 100%;
+        height: 100vh;
+        margin-left: 0px;
+        margin-top: 10px;
+        border-radius: 0px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mobile-image{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* background-color: ; */
+    }
+
+    .mobile-img{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        margin-left: 0px;
+        margin-bottom: 606.2px;
+    }
+    
+    .form-image{
+        display: none;
+    } 
+
+    .mobile-image{
+        margin-top: -65px;
+    }
+
+    .form-container .mobile-image img{
+        width: 435px;
+        height: auto;
+        padding: 0;
+        margin-left: 210px;
+        margin-bottom: 20px;
+        margin-top: 0px;
+    }
+
+    .form-header{
+        margin-left: 70px;
+        padding-left: 80px;
+        width: 400px;
+        height: 200px;
+        margin-top: 0px;
+        margin-bottom: -30px;
+    }
+
+    .form-header h1{
+        font-size: 40px;
+    }
+
+    .form-header p{
+        font-size: large;
+        font-weight: 300;
+    }
+
+    .form-body{
+        width: 300px;
+        margin-left: 140px;
+        margin-bottom: 30px;
+    }
+
+    .form-body-left ul li{
+        width: 300px;
+    }
+
+    .form-body-right form input{
+        width: 350px;
+    }
+
+    .form-body-right{
+        margin-right: 50px;
+    }
+
+    #form-button{
+        margin-left: 80px;
+        padding: 11px;
+    }
+
+    .active-success-message {
+        width: 100%;
+        height: 930px;
+        margin-left: 0;
+        margin-top: 0;
+        background-color: white;
+        border-radius: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .active-success-message svg {
+        margin-top: 220px;
+        margin-left: 50px;
+    }
+
+    .active-success-message h1 {
+        font-family: 'Roboto-Bold';
+        font-weight: 700;
+    }
+
+    .active-success-message p {
+        font-size: 18px;
+        margin-top: 30px;
+        margin-left: 55px;
+        margin-right: 0;
+        line-height: 1.5;
+        width: 300px;
+    }
+
+    .error-email{
+        margin-left: -1px;
+        padding: 15px;
+        display: inline-block;
+        margin-right: -1px;
+    }
+
+    .active-success-message button {
+        width: 60%;
+        height: 40px;
+        border-radius: 5px;
+        border: none;
+        background-color: hsl(234, 29%, 20%);
+        color: white;
+        font-family: 'Roboto-Bold';
+        font-weight: 400;
+        font-size: 15px;
+        margin-left: 70px;
+        margin-top: 70px;
+        margin-bottom: 100px;
+        cursor: pointer;
+    }
+}
